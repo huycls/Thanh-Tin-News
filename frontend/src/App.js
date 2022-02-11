@@ -128,14 +128,7 @@ function App({t}) {
               </Link>
             </div>         
             <div className='right-lowernavbar'>
-            
-            <div className="search-bar" id="search-bar"> 
-              <Route
-                render={({ history }) => (
-                  <SearchBox history={history}></SearchBox>
-                )}
-              ></Route>
-            </div>
+
            
             {/* <div className="icon-container">
               <button className="small-searchbar" onClick={dropSearchbar}><i className="fa fa-search"></i></button>            
@@ -197,9 +190,7 @@ function App({t}) {
                     <li>
                       <Link to="/applicationlist">Applications</Link>
                     </li>
-                    <li>
-                      <Link to="/productlist">Products</Link>
-                    </li>
+                  
                     <li>
                       <Link to="/orderlist">Orders</Link>
                     </li>
@@ -370,9 +361,24 @@ function App({t}) {
             </form>
           </div>
         </main>
+        <div className='social-bar'>
+          {/* <a href="#"><i className="fab fa-facebook-square"></i></a>
+          <a href="#"><i className="fab fa-linkedin"></i></a>
+          <a href="#"><i className="fab fa-youtube-square"></i></a> */}
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fab fa-facebook-f icon"></i>  </a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin-in icon"></i></a></li>
+            <li>
+              <a href="#"><i class="fab fa-youtube icon"></i></a></li>
+          </ul>
+        </div>
         <div className="footer">
               <div className="copyright">
-            <div className="copyright-container"><span>COPYRIGHT &copy; 2021</span> <span>{t("Products - Applications Thanh Tin Instrument And Chemical Co.LTD")}</span></div>
+            <div className="copyright-container"><span>COPYRIGHT &copy; 2021</span> <span>Tech News</span></div>
           </div>  
         </div>  
       </div>

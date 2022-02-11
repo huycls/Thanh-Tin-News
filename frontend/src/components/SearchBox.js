@@ -36,7 +36,7 @@ export default function SearchBox(props) {
   // }
   return (
     <form className="search" onSubmit={submitHandler}>
-      <div className="row large-searchbar">
+      <div className="row">
         <input
           type="text"
           name="q"

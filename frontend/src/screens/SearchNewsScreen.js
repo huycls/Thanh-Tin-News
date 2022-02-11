@@ -52,7 +52,7 @@ export default withNamespaces() (function SearchNewsScreen( props){
                 <title>{t("search.label")}</title>
             </Helmet>
             
-            <div>
+            <div className='searchpage'>
             {loading ? (
           <LoadingBox></LoadingBox>
         ) : error ? (

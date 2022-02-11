@@ -211,7 +211,8 @@ export default function ApplicationEditScreen(props){
                     <div>
                         <label htmlFor="articletype">Loại</label> 
                         <select id="articletype" className="form-select" value={articletype} onChange={(e) => setArticletype(e.target.value)} aria-label="Default select example">
-                        <option value="tin-tuc-va-su-kien">Tin tức</option>
+                        <option value="tin-tuc">Tin tức</option>
+                        <option value="su-kien">Sự kiện</option>
                         <option value="ung-dung">Ứng dụng</option>
                         <option value="du-an">Dự án</option>
                         </select>
@@ -220,6 +221,7 @@ export default function ApplicationEditScreen(props){
                         <label htmlFor="enarticletype">Loại</label> 
                         <select id="enarticletype" className="form-select" value={enarticletype} onChange={(e) => setEnarticletype(e.target.value)} aria-label="Default select example">
                         <option value="news">News</option>
+                        <option value="events">Events</option>
                         <option value="application">Application</option>
                         <option value="project">Project</option>
         
@@ -227,36 +229,24 @@ export default function ApplicationEditScreen(props){
                     </div>
                     <div>
                         <label htmlFor="articlecategory">Ngành ứng dụng</label> 
-                        <select id="articlecategory" className="form-select" value={articlecategory} onChange={(e) => setArticlecategory(e.target.value)} aria-label="Default select example">
-                        <option value="Tin tức và sự kiện">Tin tức và sự kiện</option>
-                        <option value="Dự án">Dự án</option>
-                        <option value="Ngành Thực phẩm">Ngành Thực phẩm</option>
-                        <option value="Ngành Y tế">Ngành Y tế</option>
-                        <option value="Ngành Môi trường">Môi trường</option>
-                        <option value="Giấy">Giấy</option>
-                        <option value="Bao bì giấy">Bao bì giấy</option>
-                        <option value="Cao su - Nhựa">Cao su - Nhựa</option>
-                        <option value="Xây dựng">Xây dựng</option>
-                        <option value="Thiết bị phòng thí nghiệm">Thiết bị phòng thí nghiệm</option>
-                        <option value="Sắt - thép">Sắt - thép</option>
-                        </select>
+                        <input
+                            id="articlecategory"
+                            type="text"
+                            placeholder="article category"
+                            value={articlecategory}
+                            onChange={(e) => setArticlecategory(e.target.value)}
+                        ></input>
                     </div>
                     <div>
-                    <label htmlFor="enarticlecategory">Ngành ứng dụng (English)</label> 
-                        <select id="enarticlecategory" className="form-select" value={enarticlecategory} onChange={(e) => setEnarticlecategory(e.target.value)} aria-label="Default select example">
-                        <option value="Tin tức và sự kiện">Tin tức và sự kiện</option>
-                        <option value="Dự án">Dự án</option>
-                        <option value="Ngành Thực phẩm">Ngành Thực phẩm</option>
-                        <option value="Ngành Y tế">Ngành Y tế</option>
-                        <option value="Ngành Môi trường">Môi trường</option>
-                        <option value="Giấy">Giấy</option>
-                        <option value="Bao bì giấy">Bao bì giấy</option>
-                        <option value="Cao su - Nhựa">Cao su - Nhựa</option>
-                        <option value="Xây dựng">Xây dựng</option>
-                        <option value="Thiết bị phòng thí nghiệm">Thiết bị phòng thí nghiệm</option>
-                        <option value="Sắt - thép">Sắt - thép</option>
-                        </select>
-                    </div>
+                        <label htmlFor="enarticlecategory">Ngành ứng dụng (English)</label> 
+                        <input
+                                id="enarticlecategory"
+                                type="text"
+                                placeholder="enarticle category"
+                                value={enarticlecategory}
+                                onChange={(e) => setEnarticlecategory(e.target.value)}
+                            ></input>
+                        </div>
                     <div>
                     <label htmlFor="content">Nội dung</label>
                     <CKEditor 

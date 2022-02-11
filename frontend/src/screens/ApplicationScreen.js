@@ -46,6 +46,7 @@ export default withNamespaces((props) => props.namespaces) (function Application
     const submitHandler = (e) => {
         e.preventDefault();
         // dispatch actions
+        window.location.reload(false);
         dispatch(
             saveApplicationReview(applicationId, {
             name: userInfo.name,

@@ -10,6 +10,8 @@ import { withNamespaces } from 'react-i18next';
 import Pagination from '../Pagination';
 import ApplicationReview from '../components/ApplicationReview';
 import Application from '../components/Application';
+import SearchBox from '../components/SearchBox';
+import {Route} from 'react-router-dom';
 
 
 
@@ -30,48 +32,77 @@ export default withNamespaces() (function HomeScreen({t}) {
   //change page
   const paginate = (pagehomeNumber) => setCurrentPage(pagehomeNumber);
   return (
-    <div>
+    <div className='homepage'>
     <Helmet>
-      <title>{t("Products - Applications Thanh Tin Instrument And Chemical Co.LTD")}</title>
+      <title>Trang tin tức công nghệ</title>
     </Helmet>
-      <div className='top-home'>
-        <HotNews />
-        <div className='application-bar'>
-        <h2>Tin ứng dụng</h2>
-          {loading ? (
-                    <LoadingBox></LoadingBox>
-                ) : error ? (
-                    <MessageBox variant="danger">{error}</MessageBox>
-                ) : (
-                    <div>
-                        {applications.length === 0 && <MessageBox>{t("noproduct.label")}</MessageBox>}
-                        <div  className="news-content"  id="myDropdown">
-                            {applications && applications.filter(item => item.articletype == "ung-dung").slice(0).reverse().map((application) => (
-                            <ApplicationReview key={application._id} application={application}></ApplicationReview>
-                            ))}
-                        </div>
-                       
-                    </div> 
-                )} 
+      <div className='content-field'>
+        <div className='top-home'>
+          <HotNews />
+        </div>
+        <div className='mid-home'>
+        <h2>Tin khác</h2>
+              {loading ? (
+                      <LoadingBox></LoadingBox>
+                  ) : error ? (
+                      <MessageBox variant="danger">{error}</MessageBox>
+                  ) : (
+                      <div>
+                          {applications.length === 0 && <MessageBox>{t("noproduct.label")}</MessageBox>}
+                          <div  className="newsfield"  id="myDropdown">
+                              {applications && applications.filter(item => item.articletype == "tin-tuc").slice(0).reverse().slice(1).map((application) => (
+                              <Application key={application._id} application={application}></Application>
+                              ))}
+                          </div>
+                        
+                      </div> 
+                  )}                    
         </div>
       </div>
-      <div className='mid-home'>
-      <h2>Tin khác</h2>
+      <div className='side-field'>        
+        <div className="search-bar" id="search-bar"> 
+          <Route
+            render={({ history }) => (
+              <SearchBox history={history}></SearchBox>
+            )}
+          ></Route>
+        </div>
+        <div className='news-sidebar'>
+          <h2>Tin ứng dụng</h2>
             {loading ? (
-                    <LoadingBox></LoadingBox>
-                ) : error ? (
-                    <MessageBox variant="danger">{error}</MessageBox>
-                ) : (
-                    <div>
-                        {applications.length === 0 && <MessageBox>{t("noproduct.label")}</MessageBox>}
-                        <div  className="news-content"  id="myDropdown">
-                            {applications && applications.filter(item => item.articletype == "tin-tuc-va-su-kien").slice(0).reverse().slice(5).map((application) => (
-                            <Application key={application._id} application={application}></Application>
-                            ))}
-                        </div>
-                       
-                    </div> 
-                )}                    
+                      <LoadingBox></LoadingBox>
+                  ) : error ? (
+                      <MessageBox variant="danger">{error}</MessageBox>
+                  ) : (
+                      <div>
+                          {applications.length === 0 && <MessageBox>{t("noproduct.label")}</MessageBox>}
+                          <div  className="news-content"  id="myDropdown">
+                              {applications && applications.filter(item => item.articletype == "ung-dung").slice(0).reverse().map((application) => (
+                              <ApplicationReview key={application._id} application={application}></ApplicationReview>
+                              ))}
+                          </div>
+                        
+                      </div> 
+                  )} 
+          </div>
+          <div className='news-sidebar'>
+            <h2>Sự kiện</h2>
+            {loading ? (
+                      <LoadingBox></LoadingBox>
+                  ) : error ? (
+                      <MessageBox variant="danger">{error}</MessageBox>
+                  ) : (
+                      <div>
+                          {applications.length === 0 && <MessageBox>{t("noproduct.label")}</MessageBox>}
+                          <div  className="news-content"  id="myDropdown">
+                              {applications && applications.filter(item => item.articletype == "su-kien").slice(0).reverse().map((application) => (
+                              <ApplicationReview key={application._id} application={application}></ApplicationReview>
+                              ))}
+                          </div>
+                        
+                      </div> 
+                  )}                    
+          </div>
       </div>
     </div>
   );

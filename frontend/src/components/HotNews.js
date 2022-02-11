@@ -38,20 +38,20 @@ export default withNamespaces() (function HotNews(props){
                         <MessageBox>No News Found</MessageBox>
                     )}
             <ul className="main-hotnews">
-                {applications && applications.filter(item => item.articletype == "tin-tuc-va-su-kien").slice(0).reverse().slice(0,1).map((application) =>(
+                {applications && applications.filter(item => item.articletype == "tin-tuc").slice(0).reverse().slice(0,1).map((application) =>(
                 <li>
-                    <Link className='main-hotnews-link' to={`/tin-moi/${application._id}`}><img className='main-hotnews-img' src={application.articleimage} alt="afa" /></Link>
                     <div className="hotnews-title">
                         <h2><Link to={`/tin-moi/${application._id}`}>{t("title", {application}).length > 30 ? t("title",{application}).substring(0, 47) + "..." : t("title",{application})}</Link></h2>
                         <small><i className="far fa-clock"></i> {formatter.format(new Date(application.createdAt))}  <i class="fas fa-comment"></i> {application.reviews.length}</small>
-                        <p>{parse(t("content", {application}).length > 250 ? t("content",{application}).substring(0, 247) + "..." : t("content",{application}))}</p>
+                        <p>{parse(t("content", {application}).length > 150 ? t("content",{application}).substring(0, 147) + "..." : t("content",{application}))}</p>
                     </div>
+                    <Link className='main-hotnews-link' to={`/tin-moi/${application._id}`}><img className='main-hotnews-img' src={application.articleimage} alt="afa" /></Link>
                 </li>
                 ))}
             </ul>
             </>
             )}
-            {loading ? (
+            {/* {loading ? (
                     <LoadingBox></LoadingBox>
                 ) : error ? (
                     <MessageBox variant="danger">{error}</MessageBox>
@@ -72,6 +72,6 @@ export default withNamespaces() (function HotNews(props){
             ))}
             </ul>
             </>
-            )}
+            )} */}
       </div>
     })
