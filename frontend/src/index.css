@@ -59,7 +59,7 @@ footer {
 
 .hotnews{
   border-bottom: 2px solid #60a3bc;
-  height: 60vh;
+  height: 40rem;
 }
 
 .content-field{
@@ -141,6 +141,14 @@ footer {
   font-weight: bold;
 }
 
+.button-field{
+  width: 20rem;
+}
+
+.button-field button{
+  font-weight: bold;
+}
+
 /*News component*/
 
 .newsfield{
@@ -151,7 +159,7 @@ footer {
 
 .newsbox{
   width: 35rem;
-  height: 40rem;
+  height: 44rem;
   position: relative;
   border-bottom: 2px solid #60a3bc;
 }
@@ -232,33 +240,46 @@ ul {
 li {
   margin-top: 1rem;
 }
-input,
 select,
-textarea,
 button {
   padding: 1rem;
   border-radius: 0.5rem;
-  border: 0.1rem #a4a4a4 solid;
+  border: none;
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: all .3s ease-out ;
 }
+
+input,
+textarea{
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: .1px #c0c0c0 solid;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all .3s ease-out ;
+}
+
 button {
   background-color: #f8f8f8;
   cursor: pointer;
+  color: #fff;
 }
 input:hover,
 select:hover,
 textarea:hover,
 button:hover {
-  border: 0.1rem #404040 solid;
+  border: none;
 }
 button.primary {
-  background-color: #f0c040;
+  background-color: #ff3838;
 }
 
 button.primary:hover{
   color: #fff;
+  background-color: #235981;
 }
 button.block {
   width: 100%;

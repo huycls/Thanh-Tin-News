@@ -42,7 +42,8 @@ export default withNamespaces() (function HotNews(props){
                 <li>
                     <div className="hotnews-title">
                         <h2><Link to={`/tin-moi/${application._id}`}>{t("title", {application}).length > 30 ? t("title",{application}).substring(0, 47) + "..." : t("title",{application})}</Link></h2>
-                        <small><i className="far fa-clock"></i> {formatter.format(new Date(application.createdAt))}  <i class="fas fa-comment"></i> {application.reviews.length}</small>
+                        <hr/>
+                        <small><i className="far fa-clock"></i> {formatter.format(new Date(application.createdAt))}  <i className="fas fa-comment"></i> {application.reviews.length}</small>
                         <p>{parse(t("content", {application}).length > 150 ? t("content",{application}).substring(0, 147) + "..." : t("content",{application}))}</p>
                     </div>
                     <Link className='main-hotnews-link' to={`/tin-moi/${application._id}`}><img className='main-hotnews-img' src={application.articleimage} alt="afa" /></Link>

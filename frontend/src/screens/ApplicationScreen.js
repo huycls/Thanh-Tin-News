@@ -54,6 +54,9 @@ export default withNamespaces((props) => props.namespaces) (function Application
           })
         );
       };
+    const checkoutHandler = () => {
+    props.history.push('/gui-cau-hoi-chi-tiet');
+    };
     const history = useHistory();
     const formatter = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' });
     return (
@@ -79,7 +82,16 @@ export default withNamespaces((props) => props.namespaces) (function Application
                         </div>
                     </div>
                     <hr/>
-                    <div className="content-margined">
+                    <div className='button-field'>
+                        <button
+                            type="button"
+                            onClick={checkoutHandler}
+                            className="primary block"
+                            >
+                            <i className="fas fa-exclamation-circle"></i> Chi tiết hơn
+                        </button>
+                    </div>
+                    {/* <div className="content-margined">
                         <h2>Bình luận</h2>
                         {!application.reviews.length && <div>Hiện chưa có bình luận nào.</div>}
                         <ul className="review" id="reviews">
@@ -119,7 +131,7 @@ export default withNamespaces((props) => props.namespaces) (function Application
                             )}
                         </li>
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
                 
             ) 

@@ -240,7 +240,6 @@ function App({t}) {
             <Route path="/tin-tuc/articletype/:articletype" component={Allnews} exact></Route>
             <Route path="/gioi-thieu" component={IntroScreen}></Route>
             <Route path="/tin-san-pham-moi" component={NewsProduct}></Route>
-            {/* <Route path="/giai-phap" component={SolutionScreen}></Route> */}
             <Route path="/cong-ty-thanh-tin-la-nha-phan-phoi-chinh-thuc-cho-hang-mettler-toledo" component={NewsScreen}></Route>
             <Route path="/thong-bao-thay-doi-ten-giao-dich" component={NewsScreen1}></Route>
             <Route path="/analytica-viet-nam-2013" component={NewsScreen2}></Route>
@@ -275,7 +274,7 @@ function App({t}) {
             ></Route>
             <Route path="/dang-nhap" component={SigninScreen}></Route>
             <Route path="/dang-ky-tai-khoan" component={RegisterScreen}></Route>
-            <Route path="/yeu-cau-bao-gia" component={ShippingAddressScreen}></Route>
+            <Route path="/gui-cau-hoi-chi-tiet" component={ShippingAddressScreen}></Route>
           
             <Route
               path="/search/name/:name?"
@@ -361,19 +360,16 @@ function App({t}) {
             </form>
           </div>
         </main>
-        <div className='social-bar'>
-          {/* <a href="#"><i className="fab fa-facebook-square"></i></a>
-          <a href="#"><i className="fab fa-linkedin"></i></a>
-          <a href="#"><i className="fab fa-youtube-square"></i></a> */}
+        <div className='social-bar'>   
           <ul>
             <li>
               <a href="#">
-                <i class="fab fa-facebook-f icon"></i>  </a>
+                <i className="fab fa-facebook-f icon"></i>  </a>
             </li>
             <li>
-              <a href="#"><i class="fab fa-linkedin-in icon"></i></a></li>
+              <a href="#"><i className="fab fa-linkedin-in icon"></i></a></li>
             <li>
-              <a href="#"><i class="fab fa-youtube icon"></i></a></li>
+              <a href="#"><i className="fab fa-youtube icon"></i></a></li>
           </ul>
         </div>
         <div className="footer">

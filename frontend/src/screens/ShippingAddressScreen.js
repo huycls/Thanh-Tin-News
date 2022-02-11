@@ -43,10 +43,14 @@ export default withNamespaces((props) => props.namespaces) (function ShippingAdd
   return (
     <div>
     <Helmet>
-      <title>{t("confirmorder")}</title>
+      <title>Chi tiết về bài viết</title>
     </Helmet>
       <form className="form" id="form" onSubmit={submitHandler}>
-          <h1>{t("confirmorder")}</h1>    
+          <h1>Bạn đang yêu cầu thêm chi tiết từ bài viết:  </h1> 
+        <div>
+          <label htmlFor='question'>Câu hỏi</label>
+          <textarea placeholder='Câu hỏi của bạn'></textarea>
+        </div>
         <div>
           <label htmlFor="fullName">{t("fullname")}</label>
           <input
@@ -119,20 +123,11 @@ export default withNamespaces((props) => props.namespaces) (function ShippingAdd
             onChange={(e) => setPhonenumber(e.target.value)}
           ></input>
         </div>
-        <div>
-          <ul>
-            <strong>{t("selected")}:</strong>
-            {cart.cartItems.map(item => (
-              <li key={item.product}>
-                <Link to={`/san-pham/${item.product}`}>{item.name}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        
         <div>
           <label />
           <button className="primary" id="submit-btn" type="submit">
-           {t("submit.label")}
+           Xác nhận gửi yêu cầu thêm thông tin
           </button>
         </div>
       </form>
