@@ -4,6 +4,7 @@ import { CART_EMPTY } from '../constants/cartConstants';
 import {Link} from 'react-router-dom';
 import { withNamespaces } from 'react-i18next';
 import Helmet from 'react-helmet';
+import { applicationCategoryListReducer } from '../reducers/applicationReducers';
 
 export default withNamespaces((props) => props.namespaces) (function ShippingAddressScreen(props) {
   const {t} = props;
@@ -46,7 +47,7 @@ export default withNamespaces((props) => props.namespaces) (function ShippingAdd
       <title>Chi tiết về bài viết</title>
     </Helmet>
       <form className="form" id="form" onSubmit={submitHandler}>
-          <h1>Bạn đang yêu cầu thêm chi tiết từ bài viết:  </h1> 
+          <h1>Bạn đang yêu cầu thêm chi tiết từ bài viết: </h1> 
         <div>
           <label htmlFor='question'>Câu hỏi</label>
           <textarea placeholder='Câu hỏi của bạn'></textarea>
