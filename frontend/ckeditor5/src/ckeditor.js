@@ -42,6 +42,7 @@ import SpecialCharactersMathematical from '@ckeditor/ckeditor5-special-character
 import Table from '@ckeditor/ckeditor5-table/src/table.js';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation.js';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment'; 
 
 class Editor extends ClassicEditor {}
 
@@ -85,7 +86,8 @@ Editor.builtinPlugins = [
 	SpecialCharactersMathematical,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+	Alignment
 ];
 
 // Editor configuration.
@@ -122,7 +124,8 @@ Editor.defaultConfig = {
 			'htmlEmbed',
 			'|',
 			'undo',
-			'redo'
+			'redo',
+			'alignment'
 		]
 	},
 	language: 'vi',

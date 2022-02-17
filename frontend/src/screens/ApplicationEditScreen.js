@@ -127,7 +127,8 @@ export default function ApplicationEditScreen(props){
            'htmlEmbed',
            '|',
            'undo',
-           'redo'
+           'redo',
+           'alignment'
          ]
        },
        language: 'vi',

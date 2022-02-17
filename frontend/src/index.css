@@ -60,12 +60,54 @@ footer {
 .hotnews{
   border-bottom: 2px solid #60a3bc;
   height: 40rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
-.content-field{
-  width: 70%;
-  border-right: .1px solid #235981;
-  padding-right: .5rem;
+.main-hotnews{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 40rem;
+  
+}
+
+.main-hotnews{
+  height: 100%;
+}
+
+.main-hotnews li{
+  margin: 0;
+}
+
+.main-hotnews-img{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hotnews-overlay{
+  position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0,0.6);
+	overflow: hidden;
+	width: 100%;
+	height: 40%;
+	transition: 1s ease;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.hotnews-overlay a{
+  color:#fff!important;
 }
 
 .side-field{
@@ -76,62 +118,38 @@ footer {
   color: #636e72;
 }
 
-.main-hotnews li{
-  display: flex;
-  margin: 0px;
-  padding: 3rem 1rem;
-}
-
-.main-hotnews h2{
-  font-weight: bold;
-  font-size: 3rem;
-}
-
-.main-hotnews .hotnews-title{
-  padding: 10px;
-  width: 55%;
-}
-
-.main-hotnews-link{
-  width: 45%;
-}
-
-.main-hotnews-img{
-  width: 100%;
-  height: 100%;
-}
-
-.hotnews li{
-  list-style: none;
-}
-
 .sub-hotnews{
+  position: relative;
   display: flex;
-  justify-content: space-evenly;
   flex-wrap: wrap;
-  padding: 0;
+  width: 49.5%;
+  height: 39rem;
+  justify-content: space-around;
 }
 
 .sub-hotnews li{
-  width: 300px;
-  display: flex; 
-  align-items: center;  
+  width:49%;
+  position: relative;
+  margin: 0;
 }
 
-.sub-hotnews h5{
-  font-weight: bold;
+.sub-hotnews h2{
+  padding: 0;
 }
+
 
 .sub-hotnews-img{
-  width: 10rem;
-}
-
-.sub-hotnews img{
-  width: 100%;
+  width:100%;
+  height: 20rem;
 }
 
 .mid-home{
   margin-top: 2rem;
+  display: flex;
+}
+
+.other-news{
+  width: 70%;
 }
 
 .mid-home h2{
@@ -220,11 +238,7 @@ footer {
   padding-left: 1rem;
 }
 
-h2 {
- 
-  font-size: 1.6rem;
-  padding: 1rem 0;
-}
+
 
 a {
   text-decoration: none;
@@ -1213,6 +1227,7 @@ margin: 10px;
   border-top: .1rem solid #c0c0c0;
   display: flex;
   height: 15rem;
+  width: 100%;
   margin-bottom: 2rem;
   padding: 0.8rem 1.6rem;
   border-radius: .3rem;
