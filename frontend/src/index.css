@@ -52,6 +52,7 @@ footer {
 
 .top-home{
   display: flex;
+  overflow: hidden;
 }
 
 .sidebar{
