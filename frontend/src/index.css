@@ -251,6 +251,11 @@ footer {
   font-size: 2rem;
 }
 
+.newsbox-title a:hover{
+  text-decoration: none;
+  color: #EA2027;
+}
+
 .overlay{
   position: absolute;
 	bottom: 0;
@@ -1182,6 +1187,11 @@ img.large {
   width: 8rem;
   height: 6rem;
   margin-right: 1rem;
+}
+
+.news-link{
+  display: flex;
+  flex-direction: column;
 }
 
 
