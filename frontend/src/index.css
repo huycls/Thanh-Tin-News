@@ -406,8 +406,15 @@ header i{
 
 a.brand img{
   height: 80px;  
-  width: 80px;
+  width: 120px;
 }
+
+.brand span{
+  color:#1e90ff;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
 .badge {
   background-color: #f02020;
   color: #ffffff;

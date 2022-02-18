@@ -126,7 +126,7 @@ function App({t}) {
           
             <div>
               <Link className="brand" to="/">
-                <img src={logo} alt="Công-ty-TNHH-Thành-Tín" />
+                <img src="https://res.cloudinary.com/thanh-tin-tech/image/upload/v1645171316/thanh%20tin%20news/output-onlinepngtools_gykcjt.png" alt="Công-ty-TNHH-Thành-Tín" /> <span>TechNews</span>
               </Link>
             </div>         
             <div className='right-lowernavbar'>
