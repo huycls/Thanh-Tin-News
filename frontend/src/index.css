@@ -26,7 +26,7 @@ body {
     'main'
     'footer';
   grid-template-columns: 1fr;
-  grid-template-rows: 120px 1fr auto;
+  grid-template-rows: 120px 1fr 200px;
   height: 100%;
 }
 header {
@@ -220,14 +220,14 @@ footer {
 
 .newsbox{
   width: 25rem;
-  height: 35rem;
+  height: 30rem;
   position: relative;
-  border-bottom: 2px solid #333333;
+  border-bottom: 1px solid #333333;
 }
 
 .newsbox-image{
   width: 25rem;
-  height: 30rem;
+  height: 25rem;
   position: relative;
 }
 
@@ -249,7 +249,7 @@ footer {
 
 .newsbox-title a{
   color: #333333;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .newsbox-title a:hover{

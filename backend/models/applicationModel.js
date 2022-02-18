@@ -12,7 +12,7 @@ const reviewSchema = new mongoose.Schema(
   );
 const ApplicationSchema = new mongoose.Schema(
     {
-        title: {type: String, required: true, unique: true ,sparse:true},
+        title: {type: String, required: true, unique: true},
         content: {type: String, required: true},
         articletype: {type: String, required: true},
         enarticletype: {type: String, required: true},
