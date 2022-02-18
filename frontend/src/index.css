@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 html {
   font-size: 62.5%; /* 16px x 62.5 = 10px = 1rem */
   box-sizing: border-box;
@@ -9,7 +10,7 @@ body {
   height: 100vh;
   max-width: 100vw;
   font-size: 1.4rem;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -25,7 +26,7 @@ body {
     'main'
     'footer';
   grid-template-columns: 1fr;
-  grid-template-rows: 110px 1fr auto;
+  grid-template-rows: 120px 1fr auto;
   height: 100%;
 }
 header {
@@ -58,7 +59,6 @@ footer {
 }
 
 .hotnews{
-  border-bottom: 2px solid #60a3bc;
   height: 40rem;
   width: 100%;
   display: flex;
@@ -89,6 +89,32 @@ footer {
   position: relative;
 }
 
+.article-category{
+  position: absolute;
+  left: -.5rem;
+  top:2rem;
+  background-color: #EA2027;
+  padding: .4rem 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.4rem!important;
+  box-shadow: 1px 2px 2px #333333;
+  border-radius: .2rem;
+  border: .1px solid #d63031;
+  transition: .5s all ease-out;
+}
+
+.article-category:hover{
+  background-color: #fff;
+  color: #d63031;
+  text-decoration: none
+}
+
+.sub-hotnews .article-category{
+  padding: .2rem 1rem;
+  left: -.3rem;
+}
+
 .hotnews-overlay{
   position: absolute;
 	bottom: 0;
@@ -97,25 +123,38 @@ footer {
 	background-color: rgba(0, 0, 0,0.6);
 	overflow: hidden;
 	width: 100%;
-	height: 40%;
+	height: 35%;
 	transition: 1s ease;
   z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
+  font-weight: bold;
+}
+
+.hotnews-overlay:hover{
+  background-color: rgba(0, 0, 0,0.8);
 }
 
 .hotnews-overlay a{
-  color:#fff!important;
+  color:#fff;
+  
+}
+
+.hotnews-overlay a:hover{
+  color:#EA2027;
+  text-decoration: none;
 }
 
 .side-field{
   width: 30%;
+  border-left: 1px solid #333333;
 }
 
+
 .hotnews small{
-  color: #636e72;
+  color: #fff;
 }
 
 .sub-hotnews{
@@ -135,6 +174,7 @@ footer {
 
 .sub-hotnews h2{
   padding: 0;
+  font-size: 1.6rem;
 }
 
 
@@ -153,10 +193,12 @@ footer {
 }
 
 .mid-home h2{
-  background-color: #235981;
+  background-color: #333333;
   color: #fff;
-  padding-left: 1rem;
-  font-weight: bold;
+  padding: .8rem 1.6rem;
+  font-size: 1.8rem!important;
+  border-bottom: .1px solid #2b4141ff;
+  border-radius: 0 60 0 60;
 }
 
 .button-field{
@@ -176,14 +218,14 @@ footer {
 }
 
 .newsbox{
-  width: 30rem;
-  height: 40rem;
+  width: 25rem;
+  height: 35rem;
   position: relative;
-  border-bottom: 2px solid #60a3bc;
+  border-bottom: 2px solid #333333;
 }
 
 .newsbox-image{
-  width: 30rem;
+  width: 25rem;
   height: 30rem;
   position: relative;
 }
@@ -205,7 +247,7 @@ footer {
 
 
 .newsbox-title a{
-  color: #235981;
+  color: #333333;
   font-size: 2rem;
 }
 
@@ -214,7 +256,7 @@ footer {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: rgba(39, 60, 117,0.8);
+	background-color: rgba(0,0,0,0.8);
 	overflow: hidden;
 	width: 100%;
 	height: 0%;
@@ -229,13 +271,6 @@ footer {
 
 .newsbox-image:hover > .overlay{
   height: 40%;
-}
-
-.news-sidebar h2{
-  background-color: #235981;
-  color: #fff;
-  font-weight: bold;
-  padding-left: 1rem;
 }
 
 
@@ -303,7 +338,7 @@ button.small {
 }
 /* Header */
 header a {
-  color: #3498db;
+  color: #333333;
   margin: 0 10px;
   display: flex;
   align-items: center;
@@ -385,16 +420,21 @@ a.brand img{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
+  background: url(https://res.cloudinary.com/thanh-tin-tech/image/upload/v1645157137/thanh%20tin%20news/image_djdlt7.jpg);
+  background-position: center;
 }
 
 .navbar{
-  background-image: linear-gradient(90deg, #2b4141ff, #0eb1d2ff, #34e4eaff, #8ab9b5ff);
+  /* background-image: linear-gradient(90deg, #2b4141ff, #0eb1d2ff, #34e4eaff, #8ab9b5ff); */
+  background-color: #333333;
   padding: 0;
   z-index: 5;
+  padding: 0 5rem;
 }
 
 .mainnav-link.active{
-  background-color: #3498db;
+  background-color: #EA2027;
 }
 
 .navbar-collapse{
@@ -408,16 +448,13 @@ a.brand img{
 }
 
 
-.navbar-dark .navbar-nav .nav-link{
+.navbar-dark .navbar-nav{
   font-weight: bold;
   margin: 0;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
-.nav-link{
-  font-weight: bold;
-}
 
 .navbar .fas{
   font-size: 1.6rem;
@@ -429,18 +466,21 @@ a.brand img{
 }
 
 .menu-ul li{
-  margin-top: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link{
   display: flex;
   align-items: center;
   color: #fff!important;
-  padding: 1rem;
+  padding: 1.6rem!important;
+  font-weight: bold;
+  margin: 0;
 }
 
 .nav-link:hover{
-  color: #d63031!important;
+  background-color: #d63031!important;
   transition: ease-out all 0.2s;
 }
 
@@ -757,6 +797,10 @@ img.large {
   border-radius: 0.5rem;
   z-index: 20;
 }
+
+.dropdown-content a{
+  color: #fff;
+}
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -801,7 +845,7 @@ img.large {
   border: none;
   font-size: 3.5rem;
   background-color: #fff;
-  color:#235981;
+  color:#0eb1d2ff;
 }
 
 .search-bar{
@@ -812,19 +856,20 @@ img.large {
 .search button {
   position: absolute;
   width: 20%;
+  height: 100%;
   outline: none;
   right: -20px;
   bottom: 0;
-  border-radius: 0.1px solid #235981;
-  background-color: #235981;
+  border-radius: 0.1px solid #0eb1d2ff!important;
+  background-color: #0eb1d2ff;
   color: #fff;
   border-radius: 5px;
 }
 
 .search button:hover{
-  border-radius: 0.1px solid #3498db;
-  background-color: #fff;
-  color:#235981;
+  border-radius: 0.1px solid #3498db!important;
+  background-color: #34e4eaff;
+  color:#0eb1d2ff;
 }
 
 .search input {
@@ -1363,7 +1408,7 @@ margin: 10px;
   width: 100%;
   padding: 30px 0;
   margin: 20px 0;
-  background-color: #235981;
+  background-color: #333333;
   color: #fff;
   border-radius: 5px;
   display: grid;
@@ -1385,7 +1430,7 @@ margin: 10px;
   width: 18%;
   border: none;
   outline: none;
-  color: #235981;
+  color: #333333;
 }
 
 .collect-email button:hover{
@@ -1483,7 +1528,7 @@ margin: 10px;
 
 .social-bar ul li a .icon {
   position: relative;
-  color: #235981;
+  color: #333333;
   transition: .5s;
   z-index: 3;
 }
@@ -1531,7 +1576,7 @@ margin: 10px;
   flex-wrap: wrap;
   position: relative;
   display: flex;
-  background-color: #235981!important;
+  background-color: #333333!important;
   color: #ffffff;
   padding-top: 30px;
 }
@@ -1594,8 +1639,8 @@ margin: 10px;
   #scrolltotop {
     display: none;
     position: fixed;
-    bottom: 12rem;
-    right: 6rem;
+    bottom: 5rem;
+    right: 3rem;
     background-color: #3c474b8f;
     color: #fff;
     width: 5rem;
@@ -1954,3 +1999,6 @@ margin: 10px;
   }
 
 }
+
+
+

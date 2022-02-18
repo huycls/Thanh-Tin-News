@@ -120,8 +120,10 @@ function App({t}) {
     <BrowserRouter>
       <div className="grid-container"> 
         <button id="scrolltotop" onClick={topFunction}><i className="fas fa-chevron-up"></i></button>
-        <header className="nav-bar" id="navbar">      
+        <header className="nav-bar" id="navbar">
+           
           <div className="lower-nav" id="top">
+          
             <div>
               <Link className="brand" to="/">
                 <img src={logo} alt="Công-ty-TNHH-Thành-Tín" />
@@ -211,7 +213,7 @@ function App({t}) {
             </div>
             </div>
           </div>
-          <Navbar expanded={expanded} bg="#007a37" expand="lg" variant="light" >
+          <Navbar expanded={expanded} expand="lg" variant="light" >
             <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} aria-controls="basic-navbar-nav"  />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav  className="mr-auto">
