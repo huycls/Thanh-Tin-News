@@ -266,7 +266,6 @@ footer {
   width: 25rem;
   height: 30rem;
   position: relative;
-  border-bottom: 1px solid #333333;
 }
 
 .newsbox-image{
@@ -451,6 +450,10 @@ header i{
 a.brand img{
   height: 80px;  
   width: 120px;
+}
+
+.brand:hover{
+ text-decoration: none;
 }
 
 .brand span{
@@ -891,6 +894,8 @@ img.large {
 }
 .table button {
   margin: 0 0.2rem;
+  color:#fff;
+  background-color: #333333;
 }
 
 .fa-shopping-basket{
@@ -917,16 +922,15 @@ img.large {
   outline: none;
   right: -20px;
   bottom: 0;
-  border-radius: 0.1px solid #0eb1d2ff!important;
-  background-color: #0eb1d2ff;
+  background-color: #EA2027;
   color: #fff;
   border-radius: 5px;
+  border: 0.1px solid #EA2027!important;
 }
 
 .search button:hover{
-  border-radius: 0.1px solid #3498db!important;
-  background-color: #34e4eaff;
-  color:#0eb1d2ff;
+  background-color: #fff;
+  color:#EA2027;
 }
 
 .search input {
@@ -1267,7 +1271,12 @@ img.large {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
+  padding-top: 5rem;
+}
+
+.applications .newsbox{
+  margin-right: 1rem;
 }
 
 .toallnews{
@@ -1397,6 +1406,8 @@ margin: 10px;
 
 
 /*Search page*/
+
+
 
 .search-screen{
   padding-left: 1rem;
