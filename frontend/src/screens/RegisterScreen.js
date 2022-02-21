@@ -88,7 +88,7 @@ export default withNamespaces((props) => props.namespaces) (function RegisterScr
         <div>
           <label />
           <button className="primary" type="submit">
-            {t("submit.label")}
+            {t("register.label")}
           </button>
         </div>
         <div>

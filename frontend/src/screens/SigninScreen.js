@@ -32,10 +32,10 @@ export default withNamespaces((props) => props.namespaces) (function SigninScree
   return (
     <div>
       <Helmet>
-        <title>{t("signin.label")}</title>
+        <title>{t("Sign in")}</title>
       </Helmet>
       <form className="form" onSubmit={submitHandler}>       
-        <h1>{t("signin.label")}</h1>
+        <h1>{t("Sign in")}</h1>
         {loading && <LoadingBox></LoadingBox>}
         {error && <MessageBox variant="danger">{error}</MessageBox>}
         <div>
@@ -49,7 +49,7 @@ export default withNamespaces((props) => props.namespaces) (function SigninScree
           ></input>
         </div>
         <div>
-          <label htmlFor="password">{t("pass.label")}</label>
+          <label htmlFor="password">{t("Password")}</label>
           <input
             type="password"
             id="password"
@@ -61,7 +61,7 @@ export default withNamespaces((props) => props.namespaces) (function SigninScree
         <div>
           <label />
           <button className="primary" type="submit">
-            {t("submit.label")}
+            {t("Sign in")}
           </button>
         </div>
         <div>

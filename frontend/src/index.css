@@ -220,15 +220,18 @@ footer {
 
 .sub-hotnews{
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-row-gap:.5rem;
+  grid-column-gap: .5rem;
   width: 49.5%;
-  height: 39rem;
-  justify-content: space-around;
+  height: 40rem;
+  justify-content: space-evenly;
 }
 
 .sub-hotnews li{
-  width:49%;
+  height: 100%;
+  width:100%;
   position: relative;
   margin: 0;
 }

@@ -61,7 +61,7 @@ applicationRouter.get(
       const articlecategories = await Application.find().distinct('articlecategory');
       res.send(articlecategories);
     })
-  );
+);
   
 applicationRouter.get(
     '/articletypes',
