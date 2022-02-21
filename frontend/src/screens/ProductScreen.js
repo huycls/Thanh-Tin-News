@@ -9,7 +9,7 @@ import { listProducts } from '../actions/productActions';
 import parse from 'html-react-parser';
 import {Helmet} from 'react-helmet';
 import { withNamespaces } from 'react-i18next';
-import {useHistory, withRouter} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import Sidebar from '../components/Sidebar';
 import {Link} from 'react-router-dom';
 
@@ -194,7 +194,7 @@ export default withNamespaces((props) => props.namespaces) (function ProductScre
                 <LoadingBox></LoadingBox>
               ) : error ? (
                 <MessageBox variant="danger">{error}</MessageBox>
-              ) : ( products && products.filter( item => product.category == item.category && item._id !== product._id).slice(0, 5).map(product => (
+              ) : ( products && products.filter( item => product.category === item.category && item._id !== product._id).slice(0, 5).map(product => (
                         <Product key={product._id} product={product}></Product>
               )))}
             </div>

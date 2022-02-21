@@ -90,24 +90,12 @@ footer {
 }
 
 .article-category{
-  /* position: absolute;
-  left: -.5rem;
-  top:2rem;
-  background-color: #EA2027;
-  padding: .4rem 1.2rem;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.4rem!important;
-  box-shadow: 1px 2px 2px #333333;
-  border-radius: .2rem;
-  border: .1px solid #d63031;
-  transition: .5s all ease-out; */
     display: inline-block;
     height: 24px;
     line-height: 24px;
     /* position: relative; */
     position: absolute;
-    left: 1.2rem;
+    left: -3px;
     top:2rem;
     margin: 0 16px 8px 0;
     padding: 0 10px 0 12px;
@@ -126,6 +114,34 @@ footer {
     font-weight: bold;
 }
 
+.article-category[data-tag="Tin tức"]{
+  background-color: #00A349;
+}
+
+.article-category[data-tag="Sự kiện - Triển lãm"]{
+  background-color: #f1c40f;
+}
+
+.article-category[data-tag="Xây dựng"]{
+  background-color: #9b59b6;
+}
+
+.article-category[data-tag="Cao su - Nhựa"]{
+  background-color: #3498db;
+}
+
+.article-category[data-tag="Ngành Môi trường"]{
+  background-color: #1abc9c;
+}
+
+.article-category[data-tag="Ngành Y tế"]{
+  background-color: #f8a5c2;
+}
+
+/* .article-category:before[data-tag="Tin tức"] {
+  border-color: transparent #00A349 transparent transparent!important;
+}
+
 .article-category:before {
   content: "";
   position: absolute;
@@ -136,9 +152,9 @@ footer {
   border-color: transparent #EA2027 transparent transparent;
   border-style: solid;
   border-width: 12px 12px 12px 0;        
-  }
+  } */
 
-.article-category:after {
+/* .article-category:after {
   content: "";
   position: absolute;
   top: 10px;
@@ -151,7 +167,7 @@ footer {
   background: #fff;
   -webkit-box-shadow: -1px -1px 2px rgba(0,0,0,0.4);
   box-shadow: -1px -1px 2px rgba(0,0,0,0.4);
-  }
+  } */
 
 .article-category:hover{
   background-color: #fff;
@@ -1039,7 +1055,6 @@ img.large {
 
 /*Dropdown menu*/
 /* Dropdown Button */
-
 .dropdownmenu{
   position: relative;
   width: 100%;

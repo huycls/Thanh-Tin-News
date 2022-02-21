@@ -1,4 +1,5 @@
 import express from 'express';
+// import express-mailer from 'express-mailer';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import path from 'path';
@@ -13,6 +14,9 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+
+// const mailer = require('express-mailer');
 
 mongoose.connect(process.env.MONGODB_URL || 'mongodb+srv://thanhtinnews:thanhtintech123@cluster0.bh0ti.mongodb.net/test1', {
   useNewUrlParser: true,

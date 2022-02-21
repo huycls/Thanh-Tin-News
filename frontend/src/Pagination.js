@@ -20,7 +20,7 @@ const Pagination = ({productPerPage, totalProduct, paginate, currentPage}) => {
                 </li>) :""
             ))}
             {currentPage < (pagehomeNumbers[pagehomeNumbers.length - 1]) - 5 ? (<li className="etc">...</li>) : ""}
-            <li class="page-item"><Link onClick={() =>  paginate(pagehomeNumbers[pagehomeNumbers.length - 1])} className="page-link" to="#">Cuối</Link></li>  
+            <li className="page-item"><Link onClick={() =>  paginate(pagehomeNumbers[pagehomeNumbers.length - 1])} className="page-link" to="#">Cuối</Link></li>  
         </ul>
     </nav>
 }

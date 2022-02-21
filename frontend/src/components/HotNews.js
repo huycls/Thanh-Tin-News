@@ -43,7 +43,7 @@ export default withNamespaces() (function HotNews(props){
                     <Link className='main-hotnews-link' to={`/tin-moi/${application._id}`}>
                         <img className='main-hotnews-img' src={application.articleimage} alt="afa" />
                     </Link>
-                    <Link to="#" className='article-category'>{application.articlecategory}</Link>
+                    <Link to={`/search-news/articlecategory/${application.articlecategory}`} className='article-category' data-tag={application.articlecategory}>{application.articlecategory}</Link>
                     <div className="hotnews-overlay">
                         <h2><Link to={`/tin-moi/${application._id}`}>{t("title", {application}).length > 250 ? t("title",{application}).substring(0, 247) + "..." : t("title",{application})}</Link></h2>
                         <small><i className="far fa-clock"></i> {formatter.format(new Date(application.createdAt))}  <i className="fas fa-comment"></i> {application.reviews.length}</small>
@@ -67,7 +67,7 @@ export default withNamespaces() (function HotNews(props){
                 {applications && applications.filter(item => item.articletype == "tin-tuc").slice(0).reverse().slice(1,5).map((application) =>(
                 <li key={application._id}>
                     <Link className='main-hotnews-link' to={`/tin-moi/${application._id}`}><img className='sub-hotnews-img' src={application.articleimage} alt="afa" /></Link>
-                    <Link to="#" className='article-category'>{application.articlecategory}</Link>
+                    <Link to={`/search-news/articlecategory/${application.articlecategory}`} className='article-category' data-tag={application.articlecategory}>{application.articlecategory}</Link>
                     <div className="hotnews-overlay">
                         <h2><Link to={`/tin-moi/${application._id}`}>{t("title", {application}).length > 60 ? t("title",{application}).substring(0, 57) + "..." : t("title",{application})}</Link></h2>
                         {/* <small><i className="far fa-clock"></i> {formatter.format(new Date(application.createdAt))}  <i className="fas fa-comment"></i> {application.reviews.length}</small> */}

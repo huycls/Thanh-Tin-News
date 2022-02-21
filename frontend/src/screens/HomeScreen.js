@@ -52,7 +52,7 @@ export default withNamespaces() (function HomeScreen({t}) {
                       <div>
                           {applications.length === 0 && <MessageBox>{t("noproduct.label")}</MessageBox>}
                           <div  className="newsfield"  id="myDropdown">
-                              {applications && applications.filter(item => item.articletype == "tin-tuc").slice(0).reverse().slice(5).map((application) => (
+                              {applications && applications.filter(item => item.articletype === "tin-tuc").slice(0).reverse().slice(5).map((application) => (
                               <Application key={application._id} application={application}></Application>
                               ))}
                           </div>
@@ -78,7 +78,7 @@ export default withNamespaces() (function HomeScreen({t}) {
                         <div>
                             {applications.length === 0 && <MessageBox>{t("noproduct.label")}</MessageBox>}
                             <div  className="news-content"  id="myDropdown">
-                                {applications && applications.filter(item => item.articletype == "ung-dung").slice(0).reverse().map((application) => (
+                                {applications && applications.filter(item => item.articletype === "ung-dung").slice(0).reverse().map((application) => (
                                 <ApplicationReview key={application._id} application={application}></ApplicationReview>
                                 ))}
                             </div>
@@ -96,7 +96,7 @@ export default withNamespaces() (function HomeScreen({t}) {
                         <div>
                             {applications.length === 0 && <MessageBox>{t("noproduct.label")}</MessageBox>}
                             <div  className="news-content"  id="myDropdown">
-                                {applications && applications.filter(item => item.articletype == "su-kien").slice(0).reverse().map((application) => (
+                                {applications && applications.filter(item => item.articletype === "su-kien").slice(0).reverse().map((application) => (
                                 <ApplicationReview key={application._id} application={application}></ApplicationReview>
                                 ))}
                             </div>
