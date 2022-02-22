@@ -36,7 +36,7 @@ header {
 
 main {
   grid-area: main;
-  padding: .8rem 10rem;
+  padding: 1.5rem 10rem;
 }
 footer {
   grid-area: footer;
