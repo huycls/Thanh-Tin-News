@@ -93,7 +93,6 @@ footer {
     display: inline-block;
     height: 24px;
     line-height: 24px;
-    /* position: relative; */
     position: absolute;
     left: -3px;
     top:2rem;
@@ -115,7 +114,7 @@ footer {
 }
 
 .article-category[data-tag="Tin tức"]{
-  background-color: #00A349;
+  background-color: #eb3b5a;
 }
 
 .article-category[data-tag="Sự kiện - Triển lãm"]{
@@ -123,19 +122,19 @@ footer {
 }
 
 .article-category[data-tag="Xây dựng"]{
-  background-color: #9b59b6;
+  background-color: #8854d0;
 }
 
 .article-category[data-tag="Cao su - Nhựa"]{
-  background-color: #3498db;
+  background-color: #3867d6;
 }
 
 .article-category[data-tag="Ngành Môi trường"]{
-  background-color: #1abc9c;
+  background-color: #20bf6b;
 }
 
 .article-category[data-tag="Ngành Y tế"]{
-  background-color: #f8a5c2;
+  background-color: #0fb9b1;
 }
 
 /* .article-category:before[data-tag="Tin tức"] {

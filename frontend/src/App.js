@@ -115,7 +115,28 @@ function App({t}) {
     i18n.changeLanguage(lang)
   }
   useScript("https://apps.elfsight.com/p/platform.js");
+  useScript("./checkform.js");
+
   
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    window.emailjs.sendForm(
+        'service_nvzscu8', 
+        'template_ahdo0sr', 
+        '#form'
+    )
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+      alert("Thank you for register!");
+      const inputs = document.querySelectorAll('input');
+          inputs.forEach(input => input.value = ''); 
+   }, function(error) {
+      console.log('FAILED...', error);
+   });
+}
+
   return (
     <BrowserRouter>
       <div className="grid-container"> 
@@ -163,7 +184,7 @@ function App({t}) {
                   </ul>
                 </div>
               ) : (
-                <Link to="/dang-nhap"><i class="fas fa-user"></i></Link>
+                <Link to="/dang-nhap"><i className="fas fa-user"></i></Link>
               )}
               {userInfo && userInfo.isSeller && (
                 <div className="dropdown">
@@ -356,9 +377,9 @@ function App({t}) {
             ></SellerRoute>
           <div className="collect-email">
             <p>{t("Enter email to receive latest news from us")}</p>
-            <form id="form"  method="GET" action="https://script.google.com/macros/s/AKfycbyTSr30R7jPcxOqEYFOuxNOjvKeKWCmBqN2tnnRYTrXPnOElveM/exec">
-              <input id="email" type="email" name="email_user" required/>
-              <button type="submit" id="submit-form" placeholder="Email">{t("Send")}</button>
+            <form id="form" >
+              <input id="email" type="email" name="email" required/>
+              <button  onClick={sendEmail} type="submit" id="submit-form" placeholder="Email">{t("Send")}</button>
             </form>
           </div>
         </main>
